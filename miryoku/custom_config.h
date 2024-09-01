@@ -3,6 +3,16 @@
 
 #define U_TAPPING_TERM 150
 
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 2500
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 50
+
+#define U_MOUSE_MOVE_EXPONENT 1
+#define U_MOUSE_MOVE_TIME 1000
+#define U_MOUSE_MOVE_DELAY 0
+#define U_MOUSE_SCROLL_EXPONENT 1
+#define U_MOUSE_SCROLL_TIME 5000
+#define U_MOUSE_SCROLL_DELAY 0
+
 #define MIRYOKU_LAYER_BASE \
 &kp Q,             &kp W,             &kp E,             &kp R,             &kp T,             &kp Y,             &kp U,             &kp I,             &kp O,             &kp P,             \
 U_MT(LGUI, A),     U_MT(LALT, S),     U_MT(LCTRL, D),    U_MT(LSHFT, F),    &kp G,             &kp H,             U_MT(LSHFT, J),    U_MT(LCTRL, K),    U_MT(LALT, L),     U_MT(LGUI, SEMI),   \
