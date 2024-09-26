@@ -13,5 +13,5 @@ jobs:
       alphas: '["QWERTY"]'
       nav: '["vi"]'
       custom_config: '["#define MIRYOKU_KLUDGE_MOUSEKEYSPR"]'
-      kconfig: '["CONFIG_ZMK_MOUSE=y\nCONFIG_ZMK_SLEEP=y"]'
+      kconfig: '["CONFIG_ZMK_MOUSE=y\nCONFIG_ZMK_SLEEP=y\nCONFIG_ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_PROXY=y\nCONFIG_ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_FETCHING=y"]'
       branches: '["zmkfirmware/zmk/main peppapighs/zmk/mouse"]'
