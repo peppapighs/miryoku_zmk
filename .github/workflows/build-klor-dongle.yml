@@ -1,0 +1,17 @@
+# Copyright 2024 Manna Harbour
+# https://github.com/manna-harbour/miryoku
+
+name: "Build Klor Dongle"
+on: workflow_dispatch
+jobs:
+  build:
+    uses: ./.github/workflows/main.yml
+    secrets: inherit
+    with:
+      board: '["nice_nano_v2"]'
+      shield: '["klor_dongle_left","klor_dongle_right","klor_dongle_central","settings_reset"]'
+      alphas: '["QWERTY"]'
+      nav: '["vi"]'
+      custom_config: '["#define MIRYOKU_KLUDGE_MOUSEKEYSPR"]'
+      kconfig: '["CONFIG_ZMK_MOUSE=y"]'
+      branches: '["zmkfirmware/zmk/main peppapighs/zmk/mouse"]'
