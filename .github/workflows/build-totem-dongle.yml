@@ -9,9 +9,8 @@ jobs:
     secrets: inherit
     with:
       board: '["seeeduino_xiao_ble"]'
-      shield: '["totem_dongle)left","totem_dongle_right","totem_dongle_central","settings_reset"]'
+      shield: '["totem_dongle_left","totem_dongle_right","totem_dongle_central","settings_reset"]'
       alphas: '["QWERTY"]'
       nav: '["vi"]'
-      custom_config: '["#define MIRYOKU_KLUDGE_MOUSEKEYSPR"]'
-      kconfig: '["CONFIG_ZMK_MOUSE=y"]'
-      branches: '["zmkfirmware/zmk/main peppapighs/zmk/mouse"]'
+      kconfig: '["CONFIG_ZMK_POINTING=y"]'
+      branches: '["zmkfirmware/zmk/main"]'

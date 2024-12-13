@@ -12,6 +12,5 @@ jobs:
       shield: '["totem_left","totem_right","settings_reset"]'
       alphas: '["QWERTY"]'
       nav: '["vi"]'
-      custom_config: '["#define MIRYOKU_KLUDGE_MOUSEKEYSPR"]'
-      kconfig: '["CONFIG_ZMK_MOUSE=y\nCONFIG_ZMK_SLEEP=y"]'
-      branches: '["zmkfirmware/zmk/main peppapighs/zmk/mouse"]'
+      kconfig: '["CONFIG_ZMK_POINTING=y\nCONFIG_ZMK_SLEEP=y"]'
+      branches: '["zmkfirmware/zmk/main"]'

@@ -12,6 +12,5 @@ jobs:
       shield: '["klor_dongle_left","klor_dongle_right","klor_dongle_central","settings_reset"]'
       alphas: '["QWERTY"]'
       nav: '["vi"]'
-      custom_config: '["#define MIRYOKU_KLUDGE_MOUSEKEYSPR"]'
-      kconfig: '["CONFIG_ZMK_MOUSE=y"]'
-      branches: '["zmkfirmware/zmk/main peppapighs/zmk/mouse"]'
+      kconfig: '["CONFIG_ZMK_POINTING=y"]'
+      branches: '["zmkfirmware/zmk/main"]'
