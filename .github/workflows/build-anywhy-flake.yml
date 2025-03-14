@@ -1,0 +1,15 @@
+# Copyright 2024 Manna Harbour
+# https://github.com/manna-harbour/miryoku
+
+name: "Build Anywhy Flake"
+on: workflow_dispatch
+jobs:
+  build:
+    uses: ./.github/workflows/main.yml
+    secrets: inherit
+    with:
+      board: '["nice_nano_v2","seeeduino_xiao_ble"]'
+      shield: '["anywhy_flake_left","anywhy_flake_right","anywhy_flake_dongle","settings_reset"]'
+      alphas: '["QWERTY"]'
+      nav: '["vi"]'
+      kconfig: '["CONFIG_ZMK_POINTING=y"]'
