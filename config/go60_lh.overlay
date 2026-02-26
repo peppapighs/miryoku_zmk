@@ -1,0 +1,32 @@
+/delete-node/ &underglow_indicators;
+/delete-node/ &cirque_split;
+
+/ {
+    chosen {
+        /delete-property/ zmk,underglow-indicators;
+    };
+
+    inputs {
+        #address-cells = <1>;
+        #size-cells = <0>;
+
+        cirque_split_lh: cirque_split_lh@0 {
+            compatible = "zmk,input-split";
+            reg = <0>;
+            device = <&glidepoint>;
+        };
+    };
+};
+
+&cirque_lh_listener {
+    compatible = "zmk,input-listener";
+    status = "disabled";
+    /delete-property/ device;
+};
+
+
+&cirque_rh_listener {
+    compatible = "zmk,input-listener";
+    status = "disabled";
+    /delete-property/ device;
+};

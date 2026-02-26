@@ -1,0 +1,15 @@
+# Copyright 2022 Manna Harbour
+# https://github.com/manna-harbour/miryoku
+
+name: "Build Go60"
+on: workflow_dispatch
+jobs:
+  build:
+    uses: ./.github/workflows/main.yml
+    secrets: inherit
+    with:
+      board: '["go60_lh","go60_rh","seeeduino_xiao_ble"]'
+      shield: '["default","go60_dongle","settings_reset"]'
+      alphas: '["QWERTY"]'
+      nav: '["vi"]'
+      branches: '["moergo-sc/zmk/main"]'

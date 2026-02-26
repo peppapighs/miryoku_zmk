@@ -1,0 +1,14 @@
+/delete-node/ &cirque_split;
+
+/ {
+    inputs {
+        #address-cells = <1>;
+        #size-cells = <0>;
+
+        cirque_split_rh: cirque_split_rh@0 {
+            compatible = "zmk,input-split";
+            reg = <1>;
+            device = <&glidepoint>;
+        };
+    };
+};

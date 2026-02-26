@@ -1,0 +1,38 @@
+// Copyright 2022 Manna Harbour
+// https://github.com/manna-harbour/miryoku
+
+#include <dt-bindings/zmk/input_transform.h>
+#include <input/processors.dtsi>
+#include <zephyr/dt-bindings/input/input-event-codes.h>
+
+#include "../miryoku/custom_config.h"
+#include "../miryoku/mapping/60/go60.h"
+#include "../miryoku/miryoku.dtsi"
+
+/ {
+    input_processors {
+        zip_click_to_right_click_mapper: zip_click_to_right_click_mapper {
+            #input-processor-cells = <0>;
+
+            compatible = "zmk,input-processor-code-mapper";
+            type = <INPUT_EV_KEY>;
+            map = <INPUT_BTN_0 INPUT_BTN_1>;
+        };
+    };
+};
+
+&cirque_rh_listener {
+    input-processors = <&zip_xy_scaler 3 1>;
+    layer_nav {
+        layers = <U_NAV>;
+        input-processors = <&zip_xy_scaler 9 1>;
+    };
+};
+
+&cirque_lh_listener {
+    input-processors = <&zip_xy_to_scroll_mapper>, <&zip_xy_scaler 1 8>, <&zip_click_to_right_click_mapper>;
+    layer_num {
+        layers = <U_NUM>;
+        input-processors = <&zip_xy_scaler 3 1>;
+    };
+};
