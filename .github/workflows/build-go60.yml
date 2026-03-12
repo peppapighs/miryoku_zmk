@@ -16,8 +16,9 @@ jobs:
     uses: ./.github/workflows/main.yml
     secrets: inherit
     with:
-      board: '["seeeduino_xiao_ble"]'
+      board: '["raytac_mdbt50q_rx"]'
       shield: '["go60_dongle","settings_reset"]'
       alphas: '["QWERTY"]'
       nav: '["vi"]'
       branches: '["moergo-sc/zmk/main"]'
+      modules: '["rschenk/zmk-component-raytac-dongle/v0.3"]'
